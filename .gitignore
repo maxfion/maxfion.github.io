@@ -1,27 +1,11 @@
-*~
-~*
-*.diff
-*.patch
-*.bak
-.DS_Store
-*.swp
-*.swo
-*.log
-*.log.*
-
-/.vscode/
-
+# Don't commit system files or dependencies
+*.DS_Store
 node_modules/
-.sass-cache/
+vendor/bundle
 
-/.bundle/
-/vendor/bundle
-*.gem
-
-yarn.lock
-package-lock.json
-Gemfile.lock
-
+# Ensure Hugo builds aren't committed to Git
+public/
+site/public/
+dist/
+.tmp/
 _site/
-.jekyll-metadata
-.jekyll-cache/
