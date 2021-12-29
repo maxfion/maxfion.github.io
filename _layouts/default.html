@@ -1,26 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+{% include topcomment.html %}
+<html lang="{{ site.lang }}">
 
-{% include head.html %}
+  {% include head.html %}
 
-<head>
-{% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url={{ site.baseurl }}/journal" />{% endif %}
-</head>
+  <body>
 
-<body>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
 
-    {% include nav.html %}
+      {% include header.html %}
 
-    {{ content }}
+      <article{%
+        if page.background-image %} id="main"{%
+        elsif page.options contains 'minihead' %} id="minihead"{%
+        else %} id="standard"{%
+        endif %}>
 
-    {% include search.html %}
+        {% include header-inner.html %}
 
-    {% include newsletter.html %}
+        {{ content }}
 
-    {% include footer.html %}
+      </article>
 
-   {% include Scroll_to_Top.html %}  
+      {% include footer.html %}
 
-</body>
+      {% include scripts.html %}
+
+    </div>
+
+  </body>
 
 </html>
