@@ -1,3 +1,5 @@
 source 'https://rubygems.org'
-gem 'jekyll', '>= 3.1.2'
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'jekyll'
+gem 'jekyll-sitemap'
+gem 'jekyll-feed'
+gem "jekyll-gist"

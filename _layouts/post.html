@@ -1,63 +1,47 @@
 ---
-layout: default
+layout: compress
 ---
-  <section class="wrapper{% if page.options contains 'minihead' %} minihead{% endif %} style5">
-    <div class="inner{% if page.options contains 'fullwidth' %} fullwidth{% endif %}">{%
-      unless site.navlinks == 'none'
-%}{%    if page.categories contains 'works'
-%}{%      assign idxperma = '/works/' | prepend: site.baseurl
-%}{%      assign idxtitle = 'Works Index'
-%}{%      assign idxbutton = 'Index'
-%}{%      include fn_groupsort_reverse.html unsorted=site.categories.works groupby='priority' sortby='date'
-%}{%    endif
-%}{%    if page.categories.first == 'topics' and page.categories.last != 'topics'
-%}{%      assign idxperma = page.categories | join: '/' | prepend: '/' | prepend: site.baseurl | append: '/'
-%}{%      assign idxtitle = 'Start page'
-%}{%      assign idxbutton = 'Start'
-%}{%      assign sorted_list = site.empty_array
-%}{%      for topic in site.categories.topics
-%}{%        if topic.categories.last == page.categories.last
-%}{%          assign sorted_list = sorted_list | push: topic
-%}{%        endif
-%}{%      endfor
-%}{%      assign sorted_list = sorted_list | sort: 'date'
-%}{%    endif
-%}{%  endunless
-%}{%  if sorted_list
-%}{%    if site.navlinks == 'top' or site.navlinks == 'both'
-%}{%      include fn_sortednav.html posclass='btntop'
-%}{%    endif
-%}{%  endif
-%}{%  unless page.options contains 'minihead' %}
-      <span id="post-date">{{ page.date  | date: "%-d %B %Y" }}</span><hr
-        style="margin-top:3px;" />{%
-      endunless
-%}{%  if page.categories contains 'works' and page.tags %}
-      <h4>Skills</h4>
-  {%    assign work = page
-%}{%    include techlist.html %}
-  {%  endif
-%}
 
-      {{ content }}{%
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body id="posts" class="inner-post-page">
 
-
-      if sorted_list
-%}{%    if site.navlinks == 'bottom' or site.navlinks == 'both'
-%}{%      unless perma
-%}{%        assign perma = '/topics/' | prepend: site.baseurl
-%}{%      endunless
-%}{%      include fn_sortednav.html posclass='btnbottom'
-%}{%    endif
-%}{%  endif
-%}{%  unless page.author == 'none'
-%}{%    include author-block.html %}
-  {%  endunless
-%}{%  if jekyll.environment == "production"
-%}{%    unless page.options contains nocomment or page.categories contains 'works'
-%}{%      include disqus.html %}
-  {%    endunless
-%}{%  endif
-%}
+    <div class="block-left">
+      <div class="content">
+        <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>
+        <div class="post-title-section">
+          <div class="section-line">Posts <em>/</em></div>
+          <h1 class="section-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+          <ul class="tags">
+            {% for tag in page.tags %}
+              <li><a href="{{ site.url }}/tags#{{ tag }}">{{ tag }}</a></li>
+              {% unless forloop.last %}
+              {% endunless %}
+            {% endfor %}
+          </ul>
+          <div class="section-line reverse"><a href="{{ site.url}}/posts">Back to posts</a> <em>/</em></div>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <div class="block-right">
+      <div class="share-buttons">
+        {% include share.html %}
+      </div>
+      <a href="../posts.html" title="posts" class="posts-menu-icon"></a>
+      <a title="projects" class="projects-menu-icon">
+        <span></span>
+      </a>
+      <div class="inner-post content">
+        <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
+        {{ content }}
+        <br>
+        {% include share.html %}
+        {% include page-pagination.html %}
+      </div>
+    </div>
+    {% include scripts.html %}
+    {% include overlay.html %}
+</body>
+</html>
