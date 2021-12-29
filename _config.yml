@@ -31,8 +31,8 @@ greeting:
   title: _Your greeting_  
   text: _Your detailed greeting text_
 # - displayed at the bottom
-closing-head: _Your closing_
-closing-para: _Your detailed closing_
+closing-head: ALL GREAT THINGS BEGIN WITH A VISION
+closing-para: E-mail:lynette@stflora.com
 
 # on all pages (and the first three you list display with greeting, if included)
 social:
