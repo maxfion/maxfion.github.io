@@ -1,6 +1,6 @@
 # Site
 title: Max & Fion
-description: ALL GREAT THINGS BEGIN WITH A VISION
+description:  
 url: https://maxfion.github.io/
 logo: halve.png                                       # Site logo
 locale: en_US
@@ -29,7 +29,7 @@ sass:
 #google-analytics: UA-XXXXX-Y
 
 # Social Links
-email:             lynette@stflora.com
+#email:             lynette@stflora.com
 #google.plus:        username
 #twitter:            username
 #facebook:           username
