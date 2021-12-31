@@ -1,6 +1,6 @@
 ---
 layout: post-list
-title: Posts
+title: Shops
 description: "List of posts"
-permalink: /posts.html
+permalink: /Shops.html
 ---
