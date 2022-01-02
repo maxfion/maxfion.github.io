@@ -1,37 +1,43 @@
 - title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-1.jpg
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-1.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-2.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-2.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-3.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-3.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-4.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-4.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-5.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-5.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-6.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-6.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-7.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-7.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-8.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-7.jpg
   completed: true
-- title: 
-  url: http://maxfion.github.io/
-  image: http://maxfion.github.io/images/projects-9.jpg
+  - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-8.jpg
   completed: true
+    - title: 
+  url: http://www.maxfion.com/
+  image: http://www.maxfion.com/images/projects-9.jpg
+  completed: true
+  
+
 
